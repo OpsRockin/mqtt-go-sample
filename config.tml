@@ -1,0 +1,6 @@
+Host = "tcp://127.0.0.1"
+Port = 1883
+Topic = "my/topic"
+QoS = 0
+Usernaem = ""
+Password = ""
