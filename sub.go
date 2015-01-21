@@ -48,7 +48,7 @@ func main() {
 	hostname, _ := os.Hostname()
 
 	server := flag.String("server", config.Host+":"+strconv.Itoa(config.Port), "The endpoint of the MQTT")
-	topic := flag.String("topic", hostname, "The topic to publish the messages on")
+	topic := flag.String("topic", config.Topic, "The topic to publish the messages on")
 	qos := flag.Int("qos", config.QoS, "The QoS to send the messages at")
 	client_id := flag.String("client_id", hostname+strconv.Itoa(time.Now().Second()), "A client ID for the connection")
 	username := flag.String("username", config.Username, "A username to authenticate to the MQTT server")
