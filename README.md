@@ -5,6 +5,8 @@ Simple pubsub program to demonstrate MQTT with Go
 
 ### MQTT のセットアップ
 
+#### ローカルでmosquittoを使用する
+
 Mac OS X で [mosquitto](http://mosquitto.org/) をインストールして、起動します。
 
 ```bash
@@ -17,7 +19,16 @@ $ mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf
 1421637760: Config loaded from /usr/local/etc/mosquitto/mosquitto.conf.
 1421637760: Opening ipv4 listen socket on port 1883.
 1421637760: Opening ipv6 listen socket on port 1883.
+```
 
+#### mosquittoの公開テストサーバを使用する
+
+[http://test.mosquitto.org](http://test.mosquitto.org)
+
+`config.tml`のHostを次のように設定します。
+
+```
+Host = "tcp://test.mosquitto.org"
 ```
 
 ### Pub/Sub テスト
